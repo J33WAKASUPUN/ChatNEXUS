@@ -82,6 +82,13 @@ MongoDB for database
 React and Vite for the frontend framework
 All other open-source libraries used in this project
 
-Contributing
+## Let's Work Together
 ---
-Contributions are welcome! Please feel free to submit a Pull Request.
+I'm always open to new opportunities and collaborations. Feel free to reach out!
+
+- 📧 Email: supunprabodha789@gmail.com
+- 🔗 LinkedIn: [ https://lk.linkedin.com/in/jeewaka-supun-221780218]
+
+---
+
+© 2024 [Jeewaka Supun] | Web Developer and UI Designer
