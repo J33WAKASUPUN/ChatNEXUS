@@ -1,7 +1,7 @@
 ChatNEXUS
 ---
 
-![ChatNexus Screenshot](./screenshot/chatbot ai.png)
+![ChatNEXUS](./screenshot/chatbot_ai.png)
 
 ChatNEXUS is an AI-powered chat application inspired by ChatGPT, designed to supercharge your creativity and productivity. This full-stack application leverages cutting-edge technologies to provide an intelligent, responsive chatbot experience.
 
