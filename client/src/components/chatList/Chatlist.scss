@@ -1,0 +1,93 @@
+.chatList{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+     
+
+    hr{
+        border: none;
+        height: 1px;
+        background-color: white;
+        opacity: 0.5;
+        border-radius: 10px;
+        margin: 20px 0px;
+    }
+
+    .title{
+        font-size: 40px;
+        font-weight: bold;
+        background: linear-gradient(to right, rgb(157, 0, 255), rgb(255, 162, 0));
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        z-index: 1000;
+
+    }
+
+    .title2{
+        font-size: 30px;
+        font-weight: bold;
+
+        background: linear-gradient(to right, rgb(157, 0, 255), rgb(255, 162, 0));
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        z-index: 1000;
+
+    }
+
+    .list {
+        display: flex;
+        border-radius: 20px;
+        flex-direction: column;
+        padding: 30px;
+        width: 90%;        
+        height: 100%;
+        margin: 30px;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        scrollbar-color: rgb(101, 65, 168) rgba(255, 255, 255, 0);
+    
+    }
+
+    a{
+        padding: 10px;
+        border-radius: 10px;
+
+        &:hover{
+            background:rgb(101, 65, 168);
+
+        }
+    }
+
+    .upgrade{
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 12px;
+
+        img{
+            width:25px;
+            height: 25px;
+        }
+
+        .texts{
+            display: flex;
+            flex-direction: column;
+
+            span{
+                &:first-child{
+                    font-weight: 600;
+                }
+
+                &:last-child{
+                    color: lightgray;
+
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,259 @@
+html, body {
+    overflow: hidden;
+    width: 100%;
+    height: 150%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .homepage {
+      display: flex;
+      align-items: center;
+      gap: 100px;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+  
+      .orbital {
+          position: absolute;
+          height: 100%;
+          opacity: 0.7;
+          animation: 100s linear infinite rotateOrbital;
+          z-index: 0;
+          top: 50%;
+          left: 50%;
+          transform: translate(-100%, -50%);
+  
+          @media screen and (max-width: 1024px) {
+              height: 30%;
+              left: 49%;
+              top: 25%;
+          }
+      }
+  
+      @media screen and (max-width: 1024px) {
+          flex-direction: column;
+          gap: 0px;
+      }
+  
+      .left {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 15px;
+          text-align: center;
+          z-index: 1000;
+  
+          h1 {
+              font-size: 120px;
+              background: linear-gradient(to right, rgb(157, 0, 255), rgb(255, 162, 0));
+              background-clip: text;
+              -webkit-background-clip: text;
+              color: transparent;
+              z-index: 1000;
+  
+              @media screen and (max-width: 1024px) {
+                  margin-top: 40px;
+                  font-size: 40px;
+              }
+          }
+  
+          h2 {
+              font-weight: 700;
+  
+              @media screen and (max-width: 1024px) {
+                  font-size: 15px;
+              }
+          }
+  
+          h4 {
+             font-weight: 400; 
+             max-width: 100%;
+
+  
+             @media screen and (max-width: 1024px) {
+              font-size: 10px;
+             }
+          }
+  
+          a {
+              position: relative;
+              padding: 20px 40px;
+              background: linear-gradient(to right, rgb(157, 0, 255), rgb(255, 162, 0));
+              color: white;
+              border-radius: 20px;
+              font-size: 15px;
+              margin-top: 20px;
+              overflow: hidden;
+              text-decoration: none; 
+              display: inline-block;
+  
+              @media screen and (max-width: 1024px) {
+                  font-size: 10px;
+                  padding: 10px 20px;
+              }
+          
+              &::before {
+                  content: ''; 
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  background: linear-gradient(to right, rgb(193, 92, 255), rgb(251, 194, 96));
+                  opacity: 0;
+                  transition: opacity 0.5s ease;
+                  z-index: 1; 
+              }
+                
+              &:hover::before {
+                  opacity: 1;
+              }
+                
+              span {
+                  position: relative;
+                  z-index: 2; 
+              }
+          }
+      }
+  
+      .right {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 80%;
+          z-index: 1000;
+  
+          .imgContainer {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: rgb(17, 3, 43);
+              border-radius: 50px;
+              width: 90%;
+              height: 50%;
+              position: relative;
+  
+              @media screen and (max-width: 1024px) {
+                  width: 100%;
+                  margin-bottom: 150px;
+              }
+  
+              .bgContainer {
+                  width: 100%;
+                  height: 100%;
+                  overflow: hidden;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  border-radius: 50px;
+  
+                  .bg {
+                      background-image: url("/bg.png");
+                      opacity: 0.4;
+                      width: 300%;
+                      height: 100%;
+                      background-size: auto 100%;
+                      animation: 15s ease-in-out infinite alternate slideBg;
+                  }
+              }
+  
+              .bot {
+                   height: 100%;
+                   width: 100%;
+                   object-fit: contain;
+                   animation: 3s ease-in-out infinite alternate botAnimate;
+  
+                   @media screen and (max-width: 1024px) {
+                      width: 70%;
+                   }
+              }
+  
+              .chat {
+                  position: absolute;
+                  bottom: -30px;
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  padding: 10px;
+                  border-radius: 50px;
+                  background: rgb(81, 21, 165);
+  
+                  @media screen and (max-width: 1024px) {
+                      display: none;
+                  }
+  
+                  @media screen and (max-width: 1280px) {
+                      bottom: -30px;
+                  }
+  
+                  img {
+                      width: 40px;
+                      height: 40px;
+                      border-radius: 50%;
+                      object-fit: cover;
+                  }
+              }
+          }
+      }
+  
+      .terms {
+          position: absolute;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          gap: 20px;
+          z-index: 1000;
+  
+          img {
+              width: 20px;
+              height: 20px;
+          }
+  
+          .links {
+              display: flex;
+              gap: 10px;
+              color: white;
+              font-size: 15px;
+  
+              @media screen and (max-width: 1280px) {
+                  font-size: 7px;
+                  gap: 7px;
+
+              }
+          }
+      }
+  }
+  
+  @keyframes rotateOrbital {
+      0% {
+          transform: translate(-50%, -50%) rotate(0deg);
+      }
+      100% {
+          transform: translate(-50%, -50%) rotate(180deg);
+      }
+  }
+  
+  @keyframes botAnimate {
+      0% {
+          transform: scale(1) rotate(0deg);
+      }
+      100% {
+          transform: scale(1.1) rotate(-5deg);
+      }
+  }
+  
+  @keyframes slideBg {
+      0% {
+          transform: translateX(0);
+      }
+      100% {
+          transform: translateX(-50%);
+      }
+  }
